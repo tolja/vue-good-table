@@ -986,7 +986,7 @@ export default {
     },
 
     handleSearch() {
-      this.resetTable();
+     // this.resetTable();
       // for remote mode, we need to emit on-search
       if (this.mode === 'remote') {
         this.$emit('on-search', {
