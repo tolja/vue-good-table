@@ -55,7 +55,6 @@
         {{selectionInfo}}
         <a
           href=""
-          @click.prevent="unselectAllInternal(true)"
         >
           {{clearSelectionText}}
         </a>
@@ -996,12 +995,12 @@ export default {
     },
 
     reset() {
-     /* this.initializeSort();
+      this.initializeSort();
       this.changePage(1);
       this.$refs['table-header-primary'].reset(true);
       if (this.$refs['table-header-secondary']) {
         this.$refs['table-header-secondary'].reset(true);
-      }*/
+      }
     },
 
     emitSelectedRows() {
@@ -1016,7 +1015,7 @@ export default {
         this.selectAllByPage && !forceAll ? this.paginated : this.filteredRows;
       each(rows, (headerRow, i) => {
         each(headerRow.children, (row, j) => {
-          this.$set(row, 'vgtSelected', true);
+          this.$set(row, 'vgtSelected', false);
         });
       });
       this.emitSelectedRows();
@@ -1030,7 +1029,7 @@ export default {
       const rows = this.selectAllByPage ? this.paginated : this.filteredRows;
       each(rows, (headerRow) => {
         each(headerRow.children, (row) => {
-          this.$set(row, 'vgtSelected', false);
+          this.$set(row, 'vgtSelected', true);
         });
       });
       this.emitSelectedRows();

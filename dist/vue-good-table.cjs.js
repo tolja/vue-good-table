@@ -1129,12 +1129,8 @@ var script$4 = {
   },
   computed: {},
   methods: {
-    reset: function reset() {
-      this.$refs['filter-row'].reset(true);
-    },
-    toggleSelectAll: function toggleSelectAll() {
-      this.$emit('on-toggle-select-all');
-    },
+    reset: function reset() {},
+    toggleSelectAll: function toggleSelectAll() {},
     isSortableColumn: function isSortableColumn(column) {
       var sortable = column.sortable;
       var isSortable = typeof sortable === 'boolean' ? sortable : this.sortable;
@@ -2361,12 +2357,13 @@ var script$6 = {
       }
     },
     reset: function reset() {
-      /* this.initializeSort();
-       this.changePage(1);
-       this.$refs['table-header-primary'].reset(true);
-       if (this.$refs['table-header-secondary']) {
-         this.$refs['table-header-secondary'].reset(true);
-       }*/
+      this.initializeSort();
+      this.changePage(1);
+      this.$refs['table-header-primary'].reset(true);
+
+      if (this.$refs['table-header-secondary']) {
+        this.$refs['table-header-secondary'].reset(true);
+      }
     },
     emitSelectedRows: function emitSelectedRows() {
       this.$emit('on-select-all', {
@@ -2380,7 +2377,7 @@ var script$6 = {
       var rows = this.selectAllByPage && !forceAll ? this.paginated : this.filteredRows;
       each__default['default'](rows, function (headerRow, i) {
         each__default['default'](headerRow.children, function (row, j) {
-          _this6.$set(row, 'vgtSelected', true);
+          _this6.$set(row, 'vgtSelected', false);
         });
       });
       this.emitSelectedRows();
@@ -2396,7 +2393,7 @@ var script$6 = {
       var rows = this.selectAllByPage ? this.paginated : this.filteredRows;
       each__default['default'](rows, function (headerRow) {
         each__default['default'](headerRow.children, function (row) {
-          _this7.$set(row, 'vgtSelected', false);
+          _this7.$set(row, 'vgtSelected', true);
         });
       });
       this.emitSelectedRows();
@@ -3007,12 +3004,6 @@ var __vue_render__$6 = function __vue_render__() {
   }, [_vm._v("\n      " + _vm._s(_vm.selectionInfo) + "\n      "), _c('a', {
     attrs: {
       "href": ""
-    },
-    on: {
-      "click": function click($event) {
-        $event.preventDefault();
-        return _vm.unselectAllInternal(true);
-      }
     }
   }, [_vm._v("\n        " + _vm._s(_vm.clearSelectionText) + "\n      ")]), _vm._v(" "), _c('div', {
     staticClass: "vgt-selection-info-row__actions vgt-pull-right"

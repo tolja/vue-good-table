@@ -140,10 +140,10 @@ export default {
   },
   methods: {
     reset() {
-      this.$refs['filter-row'].reset(true);
+
     },
     toggleSelectAll() {
-      this.$emit('on-toggle-select-all');
+
     },
     isSortableColumn(column) {
       const { sortable } = column;
@@ -246,7 +246,7 @@ export default {
           this.setColumnStyles();
       });
       this.ro.observe(this.$parent.$el);
-      
+
       // If this is a fixed-header table, we want to observe each column header from the non-fixed header.
       // You can imagine two columns swapping widths, which wouldn't cause the above to trigger.
       // This gets the first tr element of the primary table header, and iterates through its children (the th elements)
