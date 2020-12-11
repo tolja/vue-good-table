@@ -1169,22 +1169,22 @@ export default {
         this.handleSearch();
         // we reset the filteredRows here because
         // we want to search across everything.
-        this.filteredRows = cloneDeep(this.originalRows);
-        this.forceSearch = true;
-        this.sortChanged = true;
+        //this.filteredRows = cloneDeep(this.originalRows);
+        //this.forceSearch = true;
+        //this.sortChanged = true;
       }
     },
 
     searchTableOnKeyUp() {
-      if (this.searchTrigger !== 'enter') {
+      /*if (this.searchTrigger !== 'enter') {
         this.handleSearch();
-      }
+      }*/
     },
 
     resetTable() {
       this.unselectAllInternal(true);
       // every time we searchTable
-      this.changePage(1);
+      this.changePage(5);
     },
 
     // field can be:

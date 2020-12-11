@@ -2524,21 +2524,20 @@ var script$6 = {
       if (this.searchTrigger === 'enter') {
         this.handleSearch(); // we reset the filteredRows here because
         // we want to search across everything.
-
-        this.filteredRows = cloneDeep__default['default'](this.originalRows);
-        this.forceSearch = true;
-        this.sortChanged = true;
+        //this.filteredRows = cloneDeep(this.originalRows);
+        //this.forceSearch = true;
+        //this.sortChanged = true;
       }
     },
     searchTableOnKeyUp: function searchTableOnKeyUp() {
-      if (this.searchTrigger !== 'enter') {
+      /*if (this.searchTrigger !== 'enter') {
         this.handleSearch();
-      }
+      }*/
     },
     resetTable: function resetTable() {
       this.unselectAllInternal(true); // every time we searchTable
 
-      this.changePage(1);
+      this.changePage(5);
     },
     // field can be:
     // 1. function
