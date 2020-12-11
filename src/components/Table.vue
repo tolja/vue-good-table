@@ -1016,7 +1016,7 @@ export default {
         this.selectAllByPage && !forceAll ? this.paginated : this.filteredRows;
       each(rows, (headerRow, i) => {
         each(headerRow.children, (row, j) => {
-          this.$set(row, 'vgtSelected', false);
+          this.$set(row, 'vgtSelected', true);
         });
       });
       this.emitSelectedRows();
@@ -1030,7 +1030,7 @@ export default {
       const rows = this.selectAllByPage ? this.paginated : this.filteredRows;
       each(rows, (headerRow) => {
         each(headerRow.children, (row) => {
-          this.$set(row, 'vgtSelected', true);
+          this.$set(row, 'vgtSelected', false);
         });
       });
       this.emitSelectedRows();

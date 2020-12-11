@@ -2374,7 +2374,7 @@
         var rows = this.selectAllByPage && !forceAll ? this.paginated : this.filteredRows;
         each__default['default'](rows, function (headerRow, i) {
           each__default['default'](headerRow.children, function (row, j) {
-            _this6.$set(row, 'vgtSelected', false);
+            _this6.$set(row, 'vgtSelected', true);
           });
         });
         this.emitSelectedRows();
@@ -2390,7 +2390,7 @@
         var rows = this.selectAllByPage ? this.paginated : this.filteredRows;
         each__default['default'](rows, function (headerRow) {
           each__default['default'](headerRow.children, function (row) {
-            _this7.$set(row, 'vgtSelected', true);
+            _this7.$set(row, 'vgtSelected', false);
           });
         });
         this.emitSelectedRows();
