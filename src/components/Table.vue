@@ -996,12 +996,12 @@ export default {
     },
 
     reset() {
-      this.initializeSort();
+     /* this.initializeSort();
       this.changePage(1);
       this.$refs['table-header-primary'].reset(true);
       if (this.$refs['table-header-secondary']) {
         this.$refs['table-header-secondary'].reset(true);
-      }
+      }*/
     },
 
     emitSelectedRows() {
