@@ -2,7 +2,7 @@
 <div v-if="showControlBar" class="vgt-global-search vgt-clearfix">
   <div class="vgt-global-search__input vgt-pull-left">
     <span v-if="searchEnabled" class="input__icon">
-      <div class="magnifying-glass"></div>
+
     </span>
     <input
       v-if="searchEnabled"

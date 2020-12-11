@@ -726,9 +726,7 @@ var __vue_render__$2 = function __vue_render__() {
     staticClass: "vgt-global-search__input vgt-pull-left"
   }, [_vm.searchEnabled ? _c('span', {
     staticClass: "input__icon"
-  }, [_c('div', {
-    staticClass: "magnifying-glass"
-  })]) : _vm._e(), _vm._v(" "), _vm.searchEnabled ? _c('input', {
+  }) : _vm._e(), _vm._v(" "), _vm.searchEnabled ? _c('input', {
     staticClass: "vgt-input vgt-pull-left",
     attrs: {
       "type": "text",
